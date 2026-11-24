@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#176b55">
+<meta name="description" content="إدارة مزرعة العصافير">
+<link rel="manifest" href="./manifest.webmanifest">
+<title>إدارة مزرعة العصافير</title>
+<style>
+:root{--bg:#f4f7f5;--card:#fff;--ink:#172b25;--muted:#71817a;--brand:#176b55;--brand2:#e4f2ec;--line:#e3ebe6;--danger:#b54747;--shadow:0 5px 22px #183d2b0d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:1100px;margin:auto;padding:16px 14px 90px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:8px 0 18px}.brand{display:flex;align-items:center;gap:10px}.logo{width:44px;height:44px;border-radius:15px;background:var(--brand);color:white;display:grid;place-items:center;font-size:23px}.brand h1{font-size:19px;margin:0}.brand p{margin:3px 0 0;color:var(--muted);font-size:12px}.pill{border:1px solid var(--line);background:white;border-radius:99px;padding:8px 12px;color:var(--muted);font-size:12px}.nav{display:flex;gap:7px;overflow:auto;padding:4px 0 12px;scrollbar-width:none}.nav button{white-space:nowrap;border:1px solid var(--line);background:white;color:var(--muted);padding:10px 13px;border-radius:12px}.nav button.active{background:var(--brand);color:#fff;border-color:var(--brand)}.page{display:none}.page.active{display:block}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.stat,.card{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:15px;box-shadow:var(--shadow)}.stat small{color:var(--muted)}.stat strong{display:block;font-size:25px;margin-top:8px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:20px 0 10px}.section-head h2{font-size:17px;margin:0}.btn{border:0;background:var(--brand);color:white;padding:10px 14px;border-radius:11px}.btn.secondary{background:var(--brand2);color:var(--brand)}.btn.danger{background:#faeaea;color:var(--danger)}.task{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}.task:last-child{border:0}.task input{width:19px;height:19px;accent-color:var(--brand)}.task.done span{text-decoration:line-through;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.empty{padding:25px;text-align:center;color:var(--muted)}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.row.between{justify-content:space-between}.field{display:grid;gap:6px;margin:10px 0}.field label{font-size:13px;color:var(--muted)}input,select,textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px;background:white;color:var(--ink)}textarea{min-height:75px;resize:vertical}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.list{display:grid;gap:9px}.item{background:white;border:1px solid var(--line);border-radius:13px;padding:13px}.item h3{font-size:15px;margin:0 0 5px}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.day{border:1px solid var(--line);background:white;border-radius:10px;min-height:54px;padding:6px;text-align:center;font-size:13px}.day.today{border:2px solid var(--brand);background:var(--brand2)}.day.has{position:relative}.dot{width:6px;height:6px;border-radius:50%;background:var(--brand);margin:4px auto 0}.progress{height:8px;border-radius:99px;background:#e9efeb;overflow:hidden}.progress i{display:block;height:100%;background:var(--brand);border-radius:99px}.barrow{display:flex;justify-content:space-between;font-size:13px;margin:10px 0 6px}.chart{display:flex;align-items:center;gap:18px}.donut{width:112px;height:112px;border-radius:50%;background:conic-gradient(var(--brand) 0 45%,#7db7a1 45% 72%,#e6c77b 72% 100%);position:relative;flex:none}.donut:after{content:"";position:absolute;inset:17px;background:white;border-radius:50%}.legend{display:grid;gap:7px;font-size:12px;color:var(--muted)}.legend b{display:inline-block;width:9px;height:9px;border-radius:3px;margin-left:6px}.hidden{display:none!important}.footer{text-align:center;color:var(--muted);font-size:11px;margin:25px 0}.modal{position:fixed;inset:0;background:#10251f88;display:none;align-items:flex-end;justify-content:center;z-index:5;padding:12px}.modal.show{display:flex}.modal-box{background:white;width:min(650px,100%);border-radius:20px 20px 14px 14px;padding:18px;max-height:90vh;overflow:auto}.modal-box h2{margin:0 0 12px;font-size:18px}.actions{display:flex;gap:8px;justify-content:flex-start;margin-top:14px}.badge{background:var(--brand2);color:var(--brand);padding:4px 8px;border-radius:99px;font-size:11px}
+@media(max-width:720px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.app{padding:12px 11px 80px}.stat{padding:12px}.stat strong{font-size:22px}.form-grid{grid-template-columns:1fr}.section-head{margin-top:17px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+ <div class="brand"><div class="logo">🐦</div><div><h1>إدارة مزرعة العصافير</h1><p>لوحة التحكم والإدارة اليومية</p></div></div>
+ <span class="pill" id="todayLabel"></span>
+</header>
+<nav class="nav" id="nav">
+ <button class="active" data-page="home">الرئيسية</button><button data-page="tasks">المهام والتقويم</button><button data-page="targets">الأهداف</button><button data-page="birds">العصافير</button><button data-page="food">التغذية والخلطات</button><button data-page="lighting">الإضاءة</button><button data-page="backup">النسخ الاحتياطي</button>
+</nav>
+<main>
+<section class="page active" id="home">
+ <div class="grid">
+  <div class="stat"><small>إجمالي العصافير</small><strong id="statBirds">0</strong></div>
+  <div class="stat"><small>مهام اليوم</small><strong id="statTasks">0</strong></div>
+  <div class="stat"><small>أهداف نشطة</small><strong id="statGoals">0</strong></div>
+  <div class="stat"><small>خلطات محفوظة</small><strong id="statMixes">0</strong></div>
+ </div>
+ <div class="section-head"><h2>تقويم المزرعة</h2><span class="muted" id="monthTitle"></span></div>
+ <div class="card"><div class="calendar" id="miniCalendar"></div></div>
+ <div class="section-head"><h2>مهام اليوم</h2><button class="btn" onclick="openTask()">+ مهمة</button></div>
+ <div class="card" id="todayTasks"></div>
+ <div class="section-head"><h2>متابعة الأهداف</h2><button class="btn secondary" onclick="showPage('targets')">عرض الكل</button></div>
+ <div class="card" id="goalPreview"></div>
+ <div class="section-head"><h2>ملخص حالة العصافير</h2></div>
+ <div class="card chart"><div class="donut"></div><div class="legend"><div><b style="background:#176b55"></b>بالغ</div><div><b style="background:#7db7a1"></b>شاب</div><div><b style="background:#e6c77b"></b>زغلول</div><small>الرسم يتحدث حسب بيانات العصافير المسجلة.</small></div></div>
+</section>
+<section class="page" id="tasks">
+ <div class="section-head"><h2>المهام والتقويم</h2><button class="btn" onclick="openTask()">+ إضافة مهمة</button></div>
+ <div class="card"><div class="row between"><button class="btn secondary" onclick="changeMonth(-1)">السابق</button><b id="calendarTitle"></b><button class="btn secondary" onclick="changeMonth(1)">التالي</button></div><div style="height:12px"></div><div class="calendar" id="fullCalendar"></div></div>
+ <div class="section-head"><h2>قائمة المهام</h2></div><div class="list" id="allTasks"></div>
+</section>
+<section class="page" id="targets">
+ <div class="section-head"><h2>الأهداف والتارجت</h2><button class="btn" onclick="openGoal()">+ هدف جديد</button></div>
+ <div class="muted">حدد أهداف الشهر أو الموسم أو السنة وتابع نسبة الإنجاز.</div><div class="list" id="goalsList" style="margin-top:12px"></div>
+</section>
+<section class="page" id="birds">
+ <div class="section-head"><h2>ملفات العصافير</h2><button class="btn" onclick="openBird()">+ عصفور</button></div>
+ <div class="muted">لكل عصفور تقويم شهري وسجل زمني للأحداث المرتبطة به.</div><div class="list" id="birdsList" style="margin-top:12px"></div>
+</section>
+<section class="page" id="food">
+ <div class="section-head"><h2>الوجبات الجانبية</h2><button class="btn" onclick="openFood()">+ وجبة</button></div><div class="list" id="foodList"></div>
+ <div class="section-head"><h2>خلطات الحبوب</h2><button class="btn" onclick="openMix()">+ خلطة</button></div><div class="list" id="mixList"></div>
+</section>
+<section class="page" id="lighting">
+ <div class="section-head"><h2>جدول الإضاءة</h2><button class="btn" onclick="openLight()">+ جدول</button></div><div class="list" id="lightList"></div>
+</section>
+<section class="page" id="backup">
+ <div class="card"><h2>النسخ الاحتياطي</h2><p class="muted">بياناتك محفوظة على هذا الجهاز. نزّل نسخة احتياطية بانتظام، خصوصًا قبل تحديث التطبيق أو تغيير الهاتف.</p><div class="row"><button class="btn" onclick="exportData()">تنزيل نسخة احتياطية</button><label class="btn secondary" for="restoreFile">استعادة نسخة</label><input id="restoreFile" type="file" accept="application/json" class="hidden" onchange="importData(event)"></div><p class="muted" id="backupStatus"></p></div>
+</section>
+</main>
+<div class="footer">الإصدار الأولي V2 · البيانات محفوظة محليًا على جهازك</div>
+</div>
+<div class="modal" id="modal"><div class="modal-box"><div class="row between"><h2 id="modalTitle"></h2><button class="btn secondary" onclick="closeModal()">إغلاق</button></div><div id="modalBody"></div></div></div>
+<script>
+const KEY='birdFarmManagerV2';
+const today=new Date(); let viewMonth=new Date(today.getFullYear(),today.getMonth(),1);
+let db=load();
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{tasks:[],goals:[],birds:[],foods:[],mixes:[],lights:[],events:[]}}catch(e){return {tasks:[],goals:[],birds:[],foods:[],mixes:[],lights:[],events:[]}}}
+function save(){localStorage.setItem(KEY,JSON.stringify(db));render()}
+function id(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
+function fmt(d){return new Date(d+'T12:00:00').toLocaleDateString('ar-EG',{year:'numeric',month:'long',day:'numeric'})}
+function showPage(p){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===p));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.page===p));render()}
+document.getElementById('nav').addEventListener('click',e=>{let b=e.target.closest('button[data-page]');if(b)showPage(b.dataset.page)});
+function modal(title,html){document.getElementById('modalTitle').textContent=title;document.getElementById('modalBody').innerHTML=html;document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+function field(label,name,type='text',value='',extra=''){return `<div class="field"><label>${label}</label><input name="${name}" type="${type}" value="${String(value).replaceAll('"','&quot;')}" ${extra}></div>`}
+function formData(){return Object.fromEntries(new FormData(document.querySelector('#modalBody form')).entries())}
+function openTask(){modal('إضافة مهمة',`<form id="f">${field('اسم المهمة','title')}${field('التاريخ','date','date',today.toISOString().slice(0,10))}${field('الوقت','time','time')}${field('تذكير قبل الموعد بالدقائق','remind','number','0')}<div class="field"><label>التكرار</label><select name="repeat"><option value="none">بدون تكرار</option><option value="daily">يومي</option><option value="weekly">أسبوعي</option><option value="monthly">شهري</option></select></div><div class="field"><label>الأولوية</label><select name="priority"><option>عادية</option><option>مهمة</option><option>عاجلة</option></select></div><div class="field"><label>ربط بعصفور (اختياري)</label><select name="birdId"><option value="">مهمة عامة</option>${db.birds.map(b=>`<option value="${b.id}">${esc(b.name)}</option>`).join('')}</select></div></form><div class="actions"><button class="btn" onclick="saveTask()">حفظ المهمة</button></div>`)}
+function saveTask(){let d=formData();if(!d.title||!d.date)return alert('اكتب اسم المهمة وحدد التاريخ');db.tasks.push({id:id(),...d,done:false});if(d.birdId)addEvent(d.birdId,'مهمة',d.title,d.date);closeModal();save()}
+function openGoal(){modal('هدف جديد',`<form id="f">${field('اسم الهدف','title')}<div class="field"><label>الفترة</label><select name="period"><option>الشهر</option><option>الموسم</option><option>السنة</option></select></div>${field('القيمة المستهدفة','target','number','1')}${field('المتحقق حاليًا','current','number','0')}${field('تاريخ النهاية','end','date',today.toISOString().slice(0,10))}</form><div class="actions"><button class="btn" onclick="saveGoal()">حفظ الهدف</button></div>`)}
+function saveGoal(){let d=formData();if(!d.title||+d.target<=0)return alert('أدخل اسم الهدف وقيمة مستهدفة صحيحة');db.goals.push({id:id(),...d});closeModal();save()}
+function openBird(){modal('إضافة عصفور',`<form id="f">${field('اسم أو كود العصفور','name')}${field('تاريخ الميلاد أو الفقس','birth','date')}<div class="field"><label>الحالة</label><select name="status"><option>زغلول</option><option>شاب</option><option>بالغ</option></select></div><div class="field"><label>المصدر</label><select name="source"><option>إنتاج المزرعة</option><option>شراء</option></select></div>${field('ملاحظات','notes')}</form><div class="actions"><button class="btn" onclick="saveBird()">حفظ العصفور</button></div>`)}
+function saveBird(){let d=formData();if(!d.name)return alert('اكتب اسم أو كود العصفور');let b={id:id(),...d,created:new Date().toISOString()};db.birds.push(b);addEvent(b.id,'إنشاء ملف','تم إنشاء ملف العصفور',today.toISOString().slice(0,10));closeModal();save()}
+function addEvent(birdId,type,title,date,details=''){db.events.push({id:id(),birdId,type,title,date,details,created:new Date().toISOString()})}
+function birdDetails(bid){let b=db.birds.find(x=>x.id===bid);if(!b)return;let ev=db.events.filter(x=>x.birdId===bid).sort((a,b)=>b.date.localeCompare(a.date));modal('ملف '+b.name,`<div class="item"><h3>${esc(b.name)}</h3><p class="muted">الحالة: ${esc(b.status)} · المصدر: ${esc(b.source||'غير محدد')}</p><p class="muted">تاريخ الفقس: ${b.birth?fmt(b.birth):'غير مسجل'}</p><p>${esc(b.notes||'')}</p></div><div class="section-head"><h3>إضافة حدث للسجل</h3></div><form id="f"><div class="field"><label>نوع الحدث</label><select name="type"><option>كورس</option><option>تمديد كورس</option><option>قلش</option><option>دواء/علاج</option><option>تكوين زوج</option><option>بيض وتفريخ</option><option>زغاليل</option><option>ملاحظة</option><option>تغيير الحالة</option></select></div>${field('وصف الحدث','title')}${field('التاريخ','date','date',today.toISOString().slice(0,10))}${field('تفاصيل','details')}</form><button class="btn" onclick="saveBirdEvent('${bid}')">حفظ الحدث</button><div class="section-head"><h3>السجل الزمني</h3></div>${ev.length?ev.map(e=>`<div class="item"><span class="badge">${esc(e.type)}</span><h3>${esc(e.title)}</h3><small class="muted">${fmt(e.date)}</small><p class="muted">${esc(e.details||'')}</p></div>`).join(''):'<div class="empty">لا توجد أحداث مسجلة بعد</div>'}`)}
+function saveBirdEvent(bid){let d=formData();if(!d.title||!d.date)return alert('أدخل وصف الحدث والتاريخ');addEvent(bid,d.type,d.title,d.date,d.details);closeModal();save()}
+function openFood(){modal('إضافة وجبة جانبية',`<form id="f">${field('اسم الوجبة','name')}${field('المكونات','ingredients')}${field('موعد التقديم أو التكرار','schedule')}</form><button class="btn" onclick="saveSimple('foods','وجبة')">حفظ</button>`)}
+function openMix(){modal('إضافة خلطة حبوب',`<form id="f">${field('اسم الخلطة','name')}${field('المكونات والنسب','ingredients')}${field('ملاحظات','notes')}</form><button class="btn" onclick="saveSimple('mixes','خلطة')">حفظ</button>`)}
+function openLight(){modal('إضافة جدول إضاءة',`<form id="f">${field('اسم الجدول','name')}${field('وقت التشغيل','on','time')}${field('وقت الإطفاء','off','time')}${field('ملاحظات','notes')}</form><button class="btn" onclick="saveSimple('lights','إضاءة')">حفظ</button>`)}
+function saveSimple(k,label){let d=formData();if(!d.name)return alert('اكتب الاسم');db[k].push({id:id(),...d});closeModal();save()}
+function changeMonth(n){viewMonth.setMonth(viewMonth.getMonth()+n);render()}
+function calendar(el,month){let y=month.getFullYear(),m=month.getMonth(),first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate();let heads=['أحد','إثن','ثلا','أرب','خمي','جمع','سبت'];let html=heads.map(x=>`<div class="muted" style="text-align:center;font-size:11px">${x}</div>`).join('');for(let i=0;i<first;i++)html+='<div></div>';for(let d=1;d<=days;d++){let ds=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;let has=db.tasks.some(t=>t.date===ds)||db.events.some(e=>e.date===ds);html+=`<div class="day ${ds===today.toISOString().slice(0,10)?'today':''} ${has?'has':''}" onclick="selectDate('${ds}')">${d}${has?'<div class="dot"></div>':''}</div>`}el.innerHTML=html}
+function selectDate(ds){let ts=db.tasks.filter(t=>t.date===ds);modal(fmt(ds),ts.length?ts.map(t=>`<div class="item">${esc(t.title)} <span class="badge">${t.done?'منجزة':'معلقة'}</span></div>`).join(''):'<div class="empty">لا توجد مهام مسجلة في هذا اليوم</div>')}
+function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function render(){document.getElementById('todayLabel').textContent=today.toLocaleDateString('ar-EG',{weekday:'long',day:'numeric',month:'short'});document.getElementById('statBirds').textContent=db.birds.length;document.getElementById('statTasks').textContent=db.tasks.filter(t=>t.date===today.toISOString().slice(0,10)&&!t.done).length;document.getElementById('statGoals').textContent=db.goals.length;document.getElementById('statMixes').textContent=db.mixes.length;document.getElementById('monthTitle').textContent=today.toLocaleDateString('ar-EG',{month:'long',year:'numeric'});calendar(document.getElementById('miniCalendar'),new Date(today.getFullYear(),today.getMonth(),1));document.getElementById('calendarTitle').textContent=viewMonth.toLocaleDateString('ar-EG',{month:'long',year:'numeric'});calendar(document.getElementById('fullCalendar'),viewMonth);
+let td=db.tasks.filter(t=>t.date===today.toISOString().slice(0,10));document.getElementById('todayTasks').innerHTML=td.length?td.map(t=>`<div class="task ${t.done?'done':''}"><input type="checkbox" ${t.done?'checked':''} onchange="toggleTask('${t.id}')"><span>${esc(t.title)}</span><small class="muted">${esc(t.time||'')}</small></div>`).join(''):'<div class="empty">لا توجد مهام لليوم. أضف أول مهمة.</div>';
+document.getElementById('allTasks').innerHTML=db.tasks.length?db.tasks.slice().sort((a,b)=>a.date.localeCompare(b.date)).map(t=>`<div class="item"><div class="row between"><h3>${esc(t.title)}</h3><span class="badge">${t.done?'منجزة':'معلقة'}</span></div><p class="muted">${fmt(t.date)} ${t.time||''} · ${t.priority||'عادية'} · ${t.repeat==='none'?'مرة واحدة':t.repeat}</p><div class="row"><button class="btn secondary" onclick="toggleTask('${t.id}')">${t.done?'إلغاء الإنجاز':'إنجاز'}</button><button class="btn danger" onclick="del('tasks','${t.id}')">حذف</button></div></div>`).join(''):'<div class="empty">لا توجد مهام بعد</div>';
+document.getElementById('goalsList').innerHTML=db.goals.length?db.goals.map(g=>{let p=Math.min(100,Math.round((+g.current/+g.target)*100));return `<div class="item"><div class="row between"><h3>${esc(g.title)}</h3><span class="badge">${esc(g.period)}</span></div><div class="barrow"><span>${g.current} من ${g.target}</span><b>${p}%</b></div><div class="progress"><i style="width:${p}%"></i></div><p class="muted">النهاية: ${g.end?fmt(g.end):'غير محددة'}</p><button class="btn secondary" onclick="updateGoal('${g.id}')">تحديث الإنجاز</button> <button class="btn danger" onclick="del('goals','${g.id}')">حذف</button></div>`}).join(''):'<div class="empty">أضف هدف الشهر أو الموسم أو السنة</div>';
+document.getElementById('goalPreview').innerHTML=db.goals.length?db.goals.slice(0,3).map(g=>`<div class="barrow"><span>${esc(g.title)}</span><b>${Math.round(+g.current/+g.target*100)}%</b></div><div class="progress"><i style="width:${Math.min(100,+g.current/+g.target*100)}%"></i></div>`).join(''):'<div class="empty">لم تضف أهدافًا بعد</div>';
+document.getElementById('birdsList').innerHTML=db.birds.length?db.birds.map(b=>`<div class="item"><div class="row between"><div><h3>🐦 ${esc(b.name)}</h3><span class="muted">${esc(b.status)} · ${esc(b.source||'')}</span></div><button class="btn" onclick="birdDetails('${b.id}')">فتح الملف</button></div></div>`).join(''):'<div class="empty">لا توجد عصافير مسجلة. أضف أول عصفور.</div>';
+document.getElementById('foodList').innerHTML=db.foods.length?db.foods.map(x=>`<div class="item"><h3>${esc(x.name)}</h3><p class="muted">${esc(x.ingredients)} · ${esc(x.schedule)}</p></div>`).join(''):'<div class="empty">لا توجد وجبات مسجلة</div>';document.getElementById('mixList').innerHTML=db.mixes.length?db.mixes.map(x=>`<div class="item"><h3>${esc(x.name)}</h3><p class="muted">${esc(x.ingredients)} · ${esc(x.notes)}</p></div>`).join(''):'<div class="empty">لا توجد خلطات حبوب محفوظة</div>';document.getElementById('lightList').innerHTML=db.lights.length?db.lights.map(x=>`<div class="item"><h3>${esc(x.name)}</h3><p class="muted">${x.on||'--:--'} إلى ${x.off||'--:--'} · ${esc(x.notes)}</p></div>`).join(''):'<div class="empty">لا توجد جداول إضاءة</div>'}
+function toggleTask(tid){let t=db.tasks.find(x=>x.id===tid);if(t)t.done=!t.done;save()}
+function del(k,tid){if(confirm('متأكد من الحذف؟')){db[k]=db[k].filter(x=>x.id!==tid);save()}}
+function updateGoal(gid){let g=db.goals.find(x=>x.id===gid);let v=prompt('اكتب القيمة الحالية المحققة',g.current);if(v!==null&&v!==''&&!isNaN(+v)){g.current=+v;save()}}
+function exportData(){let blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='bird-farm-backup-'+today.toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(a.href);document.getElementById('backupStatus').textContent='تم تجهيز ملف النسخة الاحتياطية.'}
+function importData(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let x=JSON.parse(r.result);if(!x.birds||!x.tasks)throw Error();db={tasks:[],goals:[],birds:[],foods:[],mixes:[],lights:[],events:[],...x};save();document.getElementById('backupStatus').textContent='تمت استعادة النسخة.'}catch(err){alert('ملف النسخة غير صالح')}};r.readAsText(f)}
+if('serviceWorker'in navigator&&location.protocol!=='file:'){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
+render();
+</script>
+</body></html>
